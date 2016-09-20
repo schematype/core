@@ -1,33 +1,33 @@
-The Official SchemaType Types Repository
-========================================
+The Official SchemaType Core Types Repository
+=============================================
 
 SchemaType definition documents import base types from hosted schematype
 repositories and then use those types and/or extend them.
 
 This is the repository of reusable types as defined by SchemaType. The
-repository is hosted at: https://github.com/schematype/type. You can use it in
+repository is hosted at: https://github.com/schematype/core. You can use it in
 your `.schema` files like this:
 
 ```yaml
 -from:
-  +core/: github:schematype/type/#v0.0.1
+  +core/: github:schematype/core/#v0.0.1
 
-name: +core/string
+name: +core/str
 age: +core/int
 ```
 
 or more commonly:
 
 ```yaml
--from: github:schematype/type/#v0.0.1
+-from: github:schematype/core/#v0.0.1
 
-name: +string
+name: +str
 age: +int
 ```
 
 This repo is intended to have 1000s of useful types for you to use, but you do
 not need to use these types to use SchemaType. You can write your own hosted
-`.schema` files in the same fashion and use those. You can use a combination of
+`.stp` files in the same fashion and use those. You can use a combination of
 these types and your own. You can fork this repository and host it yourself.
 You are encouraged to add useful types to this repository by forking it on
 GitHub and then submitting Pull Requests.

@@ -1,23 +1,22 @@
-# This file contains the defintions of the most basic types defined by the
+# This file contains the definitions of the most basic types defined by the
 # SchemaType project. These definitions are not necessary for you to use
 # SchemaType though. You could make all your own types just like this and
 # import them from your own hosting domain.
 
--name: /
 -spec: schematype.org/v0.0.1
 -desc: The basic SchemaType types
 
 # The following 5 types are the usable names for the Core Types described in
 # the SchemaType Spec.
-+string:
++str:
   -desc: A sequence or zero or more unicode characters
   -core: String
 
-+boolean:
++bool:
   -desc: The set of values containing exactly 'true' and 'false'
   -core: Boolean
 
-+number:
++num:
   -desc: Any real number, unbounded in size and precision
   -core: Number
 
@@ -35,12 +34,12 @@
 +integer:
   -desc: Any integer, unbounded in size
   -type: /number
-  -mate: /^[\-\+][0-9]+$/
+  -like: /^[\-\+][0-9]+$/
 
 +real:
   -desc: Any floating point number
   -type: /number
-  -mate: /^[+-]?[0-9]+(\.[0-9]+)?$/
+  -like: /^[+-]?[0-9]+(\.[0-9]+)?$/
 
 +int:
   -desc: Alias for int32
@@ -53,25 +52,25 @@
 +int32:
   -desc: Signed 32 bit integer
   -type: /integer
-  -min: -2147483648
-  -max: 2147483647
+  -mini: -2147483648
+  -maxi: 2147483647
 
 +int64:
   -desc: Signed 64 bit integer
   -type: /integer
-  -min: -9223372036854775808
-  -max: 9223372036854775807
+  -mini: -9223372036854775808
+  -maxi: 9223372036854775807
 
 +uint32:
   -desc: Unsigned 32 bit integer
   -type: /integer
-  -min: 0
-  -max: 4294967295
+  -mini: 0
+  -maxi: 4294967295
 
 +uint64:
   -desc: Unsigned 64 bit integer
   -type: /integer
-  -min: 0
-  -max: 18446744073709551615
+  -mini: 0
+  -maxi: 18446744073709551615
 
 # Work in progess...
