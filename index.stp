@@ -31,45 +31,45 @@
 # The following types are all the single word types defined by SchemaType.
 # You are encouraged to fork and extend or fix these types in your own domain.
 # You are also encouraged to push your fixes upstream.
-+integer:
++int:
   -desc: Any integer, unbounded in size
-  -type: /number
+  -type: +num
   -like: /^[\-\+][0-9]+$/
 
 +real:
   -desc: Any floating point number
-  -type: /number
+  -type: +num
   -like: /^[+-]?[0-9]+(\.[0-9]+)?$/
 
 +int:
   -desc: Alias for int32
-  -type: /int32
+  -type: +int32
 
 +long:
   -desc: Alias for int64
-  -type: /int64
+  -type: +int64
 
 +int32:
   -desc: Signed 32 bit integer
-  -type: /integer
+  -type: +int
   -mini: -2147483648
   -maxi: 2147483647
 
 +int64:
   -desc: Signed 64 bit integer
-  -type: /integer
+  -type: +int
   -mini: -9223372036854775808
   -maxi: 9223372036854775807
 
 +uint32:
   -desc: Unsigned 32 bit integer
-  -type: /integer
+  -type: +int
   -mini: 0
   -maxi: 4294967295
 
 +uint64:
   -desc: Unsigned 64 bit integer
-  -type: /integer
+  -type: +int
   -mini: 0
   -maxi: 18446744073709551615
 
